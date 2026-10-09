@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/final.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+        integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+
+
+    <div class="btn1">
+        <div class="logo">
+            <h1>Shop<span>Ease</span></h1>
+        </div>
+        <div class="home">
+            <p class="text">Home</p>
+            <p class="text">Products</p>
+            <p class="text">Categories</p>
+            <p class="text">Contact</p>
+        </div>
+        <div class="btn2">
+            <button onclick="openPopup()" id="btn" class="btn">Add to Cart</button>
+        </div>
+    </div>
+    <div class="layer1">
+        <div class="child">
+            <p>WELCOME TO SHOPEASE</p>
+            <h2>Everything You<br> Need, <span>All In One Place.</span></h2>
+            <p class="p1">Discover amazing products at great prices. Shop your favorite <br>products today.</p>
+            <button class="shopnow">Shop Now →</button>
+        </div>
+        <div class="child"><img src="/image_files/Screenshot.png" alt="" height="250px" text-align="center"
+                class="banner-img"></div>
+    </div>
+    <div class="layer2">
+        <h2>Shop By Category</h2>
+        <div class="all">
+            <button class="button">All</button>
+            <button class="button">Electronics</button>
+            <button class="button">Fashion</button>
+            <button class="button">Shoes</button>
+            <button class="button">Accessories</button>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h3>Your Cart</h3>
+            <span onclick="closePopup()" class="close">&times;</span>
+            <hr>
+            <h3>Cart: <span id="countCart">0</span></h3>
+            <hr>
+            <div class="abc">
+                <div class="ab">
+                    <h4>Product 1 </h4>
+                    <p>Product:<span id="product">-</span></p>
+                    <p>Price:<span id="price">-</span></p>
+                    <p>Quantity:<button onclick="decreaseHeadphone()"> -</button>
+                        <span id="headphoneQuantity">0</span>
+                        <button onclick="increaseHeadphone()"> +</button>
+                        <button onclick="resetHeadphone()"> Reset</button>
+                    </p>
+                </div>
+
+                <div class="ab">
+                    <h4>Product 2</h4>
+                    <p>Product:<span id="productt">-</span></p>
+                    <p> Price: <span id="pricee">-</span></p>
+
+                    <p>Quantity:<button onclick="decreaseWatch()">-</button>
+                        <span id="watchQuantity">0</span>
+                        <button onclick="increaseWatch()"> +</button>
+                        <button onclick="resetWatch()">Reset</button>
+                    </p>
+
+                </div>
+
+                <div class="ab">
+                    <h4>Product 3</h4>
+                    <p>Product:<span id="producta">-</span></p>
+                    <p> Price: <span id="pricea">-</span></p>
+                    <p>Quantity:<button onclick="decreaseShirt()">-</button>
+                        <span id="shirtQuantity">0</span>
+                        <button onclick="increaseShirt()"> +</button>
+                        <button onclick="resetShirt()">Reset</button>
+                    </p>
+                </div>
+                <div class="ab">
+                    <h4>Product 4</h4>
+                    <p>Product:<span id="productb">-</span></p>
+                    <p> Price: <span id="priceb">-</span></p>
+                    <p>Quantity:<button onclick="decreaseShoes()">-</button>
+                        <span id="shoesQuantity">0</span>
+                        <button onclick="increaseShoes()"> +</button>
+                        <button onclick="resetShoes()">Reset</button>
+                    </p>
+                </div>
+                <div class="ab">
+                    <h4>Product 5</h4>
+                    <p>Product:<span id="productc">-</span></p>
+                    <p> Price: <span id="pricec">-</span></p>
+                    <p>Quantity:<button onclick="decreaseSunglasses()">-</button>
+                        <span id="sunglassesQuantity">0</span>
+                        <button onclick="increaseSunglasses()"> +</button>
+                        <button onclick="resetSunglasses()">Reset</button>
+                    </p>
+                </div>
+                <div class="ab">
+                    <h4>Product 6</h4>
+                    <p>Product:<span id="productd">-</span></p>
+                    <p> Price: <span id="priced">-</span></p>
+                    <p>Quantity:<button onclick="decreaseBoard()">-</button>
+                        <span id="boardQuantity">0</span>
+                        <button onclick="increaseBoard()"> +</button>
+                        <button onclick="resetBoard()">Reset</button>
+                    </p>
+                </div>
+
+            </div>
+
+            <h2>
+                Total Price:
+                ₹<span id="totalPrice">0</span>
+            </h2>
+
+        </div>
+    </div>
+    <div class="layer3">
+        <p class="pp">OUR PRODUCTS</p>
+        <div class="search-box">
+            <h2>Popular Products</h2>
+            <div class="search-box2">
+                <input type="text" placeholder="Search products...">
+                <button class="shopnow1"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+
+            </div>
+        </div>
+        <div class="main">
+
+            <div class="product">
+                <div class="img-div">
+                    <img src="/image_files/Screenshot2.png" alt="" class="img1">
+                </div>
+                <div class="information">
+                    ELECTRONICS
+                    <h2>Headphone</h2>
+                    <p>Price :<span>-</span> ₹1499</p>
+                    <button onclick="addToCart('headphone')" class="add">Add </button>
+
+                </div>
+            </div>
+            <div class="product">
+                <div class="img-div">
+                    <img src="/image_files/Screenshot3.png" alt="" class="img1">
+
+                </div>
+                <div class="information">
+                    ELECTRONICS
+                    <h2>Smart Watch</h2>
+                    <p>Price :<span>-</span> ₹1399</p>
+                    <button onclick="addToCart('watch')" class="add">Add </button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="img-div">
+                    <img src="/image_files/Screenshot4.png" alt="" class="img1">
+
+                </div>
+                <div class="information">
+                    FASHION
+                    <h2>T-Shirt</h2>
+                    <p>Price :<span>-</span> ₹1099</p>
+                    <button onclick="addToCart('shirt')" class="add">Add </button>
+                </div>
+            </div>
+        </div>
+        <div class="main2">
+            <div class="product">
+                <div class="img-div">
+                    <img src="/image_files/Screenshot5.png" alt="" class="img1">
+
+                </div>
+                <div class="information">
+                    SHOES
+                    <h2>Running Shoes</h2>
+                    <p>Price :<span>-</span> ₹2099</p>
+                    <button onclick="addToCart('shoes')" class="add">Add </button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="img-div">
+                    <img src="/image_files/Screenshot6.png" alt="" class="img1">
+
+                </div>
+                <div class="information">
+                    ACCESSORIES
+                    <h2>Sunglasses</h2>
+                    <p>Price :<span>-</span> ₹1599</p>
+                    <button onclick="addToCart('sunglasses')" class="add">Add </button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="img-div">
+                    <img src="/image_files/Screenshot7.png" alt="" class="img1">
+
+                </div>
+                <div class="information">
+                    ELECTRONICS
+                    <h2>Gaming Keyboard</h2>
+                    <p>Price :<span>-</span> ₹1499</p>
+                    <button onclick="addToCart('board')" class="add">Add </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="layer4">
+        <div class="features">
+            <div class="img-div2">
+                <img src="/image_files/Screenshot8.png" alt="" class="img2">
+            </div>
+            <div class="information2">
+                <h3>Free Shipping</h3>
+                <p>Free shipping on orders over $50</p>
+            </div>
+        </div>
+        <div class="features">
+            <div class="img-div2">
+                <img src="/image_files/Screenshot9.png" alt="" class="img2">
+            </div>
+            <div class="information2">
+                <h3>Secure Payment</h3>
+                <p>Your payment information is protected</p>
+            </div>
+        </div>
+        <div class="features">
+            <div class="img-div2">
+                <img src="/image_files/Screenshot10.png" alt="" class="img2">
+            </div>
+            <div class="information2">
+                <h3>Easy Returns</h3>
+                <p>30-day easy return policy</p>
+            </div>
+        </div>
+        <div class="features">
+            <div class="img-div2">
+                <img src="/image_files/Screenshot11.png" alt="" height="80x;" class="img2">
+            </div>
+            <div class="information2">
+                <h3>24/7 Support</h3>
+                <p>We're always here to help</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="layer7">
+        <div class="layer5">
+            <h2>Get Special Offers</h2>
+            <p>Subscribe to our newsletter and receive exclusive deals.</p>
+            <div class="email">
+                <input type="email" placeholder="Enter your email.....">
+                <button class="shopnow1">Subscribe</button>
+            </div>
+        </div>
+        <div class="layer6">
+            <div class="about">
+                <h2>Shop<span id="shop">Ease</span></h2>
+                <p>Your one-stop online shopping destination.</p>
+            </div>
+            <div class="about">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#Products">Products</a>
+                <a href="#Categories">Categories</a>
+            </div>
+            <div class="about">
+                <h3>Contact</h3>
+                <p>📧 support@shopease.com</p>
+                <p>📞 +1 234 567 890</p>
+            </div>
+        </div>
+        <div class="layer8">
+            <p>© 2026 ShopEase. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- <div class="layer8">
+          <hr>
+        <p>© 2026 ShopEase. All rights reserved.</p>
+    </div> -->
+
+
+    <script src="/final.js"></script>
+</body>
+
+</html>
